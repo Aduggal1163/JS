@@ -1,8 +1,123 @@
-
-
-
-
-
+function saveToDB(data)
+{
+  return new Promise((resolve,reject)=>{
+    let internetSpeed=Math.floor(Math.random()*10)+1;
+    if(internetSpeed>=6)
+    {
+      resolve(data);
+    }
+    else
+    {
+      reject(data);
+    }
+  })
+}
+let response=saveToDB("Hello World")
+response
+.then((data)=>{
+  console.log("Data saved to DB ", data);
+  return saveToDB("Apna College");
+})
+.then((data)=>{
+  console.log("Data2 saved to DB ",data);
+  return saveToDB("Wow Very Dangerous");
+})
+.then((data)=>{
+  console.log("Data3 saved to DB ",data);
+  return saveToDB("Abhishek Aastha Duggal");
+})
+.then((data)=>{
+  console.log("Dataa saved to DB ",data);
+})
+.catch((data)=>{
+  console.log("Error saving data to DB ",data);
+})
+// function saveToDb(data) {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     if (internetSpeed >= 6) resolve("Success");
+//     else reject("Failure");
+//   })
+// }
+// let ans = saveToDb("Bank Transactions")
+// ans
+//   .then(() => {
+//     console.log("Data1 saved to database")
+//     saveToDb("Health")
+//     .then(()=>{
+//       console.log("Data2 saved to database")
+//     })
+//   saveToDb("WOW")
+//     .then(()=>{
+//       console.log("Data3 saved to database")
+//     })
+//   })
+//   .catch(() => {
+//     console.log("Error saving data to database")
+//   })
+// function savetoDb(data, success, failure) {
+//   let internetspeed = Math.floor(Math.random() * 10) + 1;
+//   if (internetspeed >= 6) success();
+//   else failure();
+// }
+// savetoDb("Bank Details", () => {
+//   console.log("Bank Details saved successfully");
+//   savetoDb("Personal Details", () => {
+//     console.log("Personal Detail saved successfully");
+//     savetoDb("Payment Details", () => {
+//       console.log("Payment Details saved successfully");
+//     }, () => {
+//       console.log("Payment Details failed to save");
+//     })
+//   }, () => {
+//     console.log("Failed to save Personal Details");
+//   })
+// }, () => {
+//   console.log("Error in saving data");
+// })
+// let h1 = document.querySelector("h1");
+// function changeColor(color, delay, nextColorChange) {
+//   setTimeout(() => {
+//     h1.style.color = color;
+//     if (nextColorChange) nextColorChange();
+//   }, delay);
+// }
+// changeColor("red", 1000, () => {
+//   changeColor("orange", 1000, () => {
+//     changeColor("green", 1000, () => {
+//       changeColor("pink", 1000);
+//     });
+//   });
+// });
+// function changeColor(color,delay){
+//     setTimeout(()=>{
+//         h1.style.color=color;
+//     },delay)
+// }
+// changeColor("red",1000);
+// changeColor("orange",2000);
+// changeColor("green",3000);
+// console.log("object3")
+// setTimeout(()=>{
+//     console.log("object2")
+// },3000);
+// setTimeout(()=>{
+//     console.log("object2a")
+// },3000);
+// console.log("object1")
+// function one(){
+//     console.log("Inside one")
+//     return 1;
+// }
+// let two=()=>{
+//     console.log("Inside two")
+//     return one()+one();
+// }
+// function ans(){
+//     console.log("ans is");
+//     console.log(one()+two());
+// }
+// ans();
 // let form = document.querySelector("form");
 // let body = document.querySelector("body");
 // form.addEventListener("submit", function (e) {
