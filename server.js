@@ -1,3 +1,46 @@
+
+// let jsonData='{"fact":"The ancestor of all domestic cats is the African Wild Cat which still exists today.","length":83}'
+// console.log(jsonData)
+// let JsonData=JSON.parse(jsonData);
+// console.log(JsonData);
+// console.log(JsonData.fact);
+// let h1=document.querySelector('h1');
+// let i=1;
+//         let changeColor=(color,time)=>{
+//             return new Promise((resolve,reject)=>{
+//                 setTimeout(()=>{
+//                     h1.style.color=color;
+//                     console.log(`color changes to ${color} for the ${i}th times.`);
+//                     i=i+1;
+//                     resolve();
+//                 },time);
+//             })
+//     }
+
+// async function process(){
+//     await changeColor('red',1000);
+//     await changeColor('blue',1000);
+//     await changeColor('green',1000);
+//     await changeColor('yellow',1000);
+//     await changeColor('pink',1000);
+// }
+
+// process();
+// function getNum(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             let num = Math.floor(Math.random()*100)+1;
+//             console.log(num);
+//             resolve();
+//         },1000)
+//     })
+// }
+// async function demo(){
+//     await getNum();
+//     await getNum();
+//     await getNum();
+// }
+// demo();
 // let h1=document.querySelector('h1');
 // function changeColor(color,delay){
 //   return new Promise((resolve,reject)=>{
