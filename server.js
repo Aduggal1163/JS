@@ -1,37 +1,71 @@
-function saveToDB(data)
-{
-  return new Promise((resolve,reject)=>{
-    let internetSpeed=Math.floor(Math.random()*10)+1;
-    if(internetSpeed>=6)
-    {
-      resolve(data);
-    }
-    else
-    {
-      reject(data);
-    }
-  })
-}
-let response=saveToDB("Hello World")
-response
-.then((data)=>{
-  console.log("Data saved to DB ", data);
-  return saveToDB("Apna College");
-})
-.then((data)=>{
-  console.log("Data2 saved to DB ",data);
-  return saveToDB("Wow Very Dangerous");
-})
-.then((data)=>{
-  console.log("Data3 saved to DB ",data);
-  return saveToDB("Abhishek Aastha Duggal");
-})
-.then((data)=>{
-  console.log("Dataa saved to DB ",data);
-})
-.catch((data)=>{
-  console.log("Error saving data to DB ",data);
-})
+// let h1=document.querySelector('h1');
+// function changeColor(color,delay){
+//   return new Promise((resolve,reject)=>{
+//       setTimeout(()=>{
+//         h1.style.color=color;
+//         resolve("Color Chaanged");
+//       },delay)
+//       if(!color)reject("Error");
+//   })
+// }
+// changeColor('red',1000)
+// .then((data)=>{
+//   console.log(data);
+//   return changeColor('blue',1000);
+// })
+// .then((data)=>{
+//   console.log(data);
+//   return changeColor('green',1000);
+// })
+// .then((data)=>{
+//   console.log(data);
+//   return changeColor('yellow',1000);
+// })
+// .then((data)=>{
+//   console.log(data);
+//   return changeColor('pink',1000);
+// })
+// .catch((data)=>{
+//   console.log(data);
+//   console.log('Error while changing color');
+// })
+// .finally(()=>{
+//   console.log("All Colors Changed")
+// })
+// function saveToDB(data)
+// {
+//   return new Promise((resolve,reject)=>{
+//     let internetSpeed=Math.floor(Math.random()*10)+1;
+//     if(internetSpeed>=6)
+//     {
+//       resolve(data);
+//     }
+//     else
+//     {
+//       reject(data);
+//     }
+//   })
+// }
+// let response=saveToDB("Hello World")
+// response
+// .then((data)=>{
+//   console.log("Data saved to DB ", data);
+//   return saveToDB("Apna College");
+// })
+// .then((data)=>{
+//   console.log("Data2 saved to DB ",data);
+//   return saveToDB("Wow Very Dangerous");
+// })
+// .then((data)=>{
+//   console.log("Data3 saved to DB ",data);
+//   return saveToDB("Abhishek Aastha Duggal");
+// })
+// .then((data)=>{
+//   console.log("Dataa saved to DB ",data);
+// })
+// .catch((data)=>{
+//   console.log("Error saving data to DB ",data);
+// })
 // function saveToDb(data) {
 //   return new Promise((resolve, reject) => {
 //     let internetSpeed = Math.floor(Math.random() * 10) + 1;
