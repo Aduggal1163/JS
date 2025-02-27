@@ -1,15 +1,29 @@
 let fact="https://catfact.ninja/fact";
-fetch(fact)
-.then((res)=>{
-console.log(res);
-return res.json()
-.then((data)=>{
-    console.log(data.fact)
-})
-})
-.catch((err)=>{
-    console.log(err)
-})
+async function getFact(){
+    try {
+        const res=await fetch(fact);
+        let data=res.json();
+        data.then((data)=>{
+            console.log("Fact is :" ,data.fact)
+        }).catch((err)=>{
+            console.log(err)
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}
+getFact();
+// fetch(fact)
+// .then((res)=>{
+// console.log(res);
+// return res.json()
+// .then((data)=>{
+//     console.log(data.fact)
+// })
+// })
+// .catch((err)=>{
+//     console.log(err)
+// })
 // let jsonData='{"fact":"The ancestor of all domestic cats is the African Wild Cat which still exists today.","length":83}'
 // console.log(jsonData)
 // let JsonData=JSON.parse(jsonData);
