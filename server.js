@@ -1,18 +1,31 @@
-let fact="https://catfact.ninja/fact";
-async function getFact(){
-    try {
-        const res=await fetch(fact);
-        let data=res.json();
-        data.then((data)=>{
-            console.log("Fact is :" ,data.fact)
-        }).catch((err)=>{
-            console.log(err)
-        })
-    } catch (error) {
-        console.log(error)
-    }
-}
-getFact();
+// let fact="https://catfact.ninja/fact";
+// let btn=document.querySelector("button");
+// let p=document.querySelector("p");
+// btn.addEventListener("click",async()=>{
+//     try {
+//         let Adata=await axios.get(fact);
+//         let rdata=Adata.data.fact;
+//         p.innerText=rdata;      
+//     } catch (error) {
+//         console.log(error)
+//     }
+// })
+// getFact();
+// let fact="https://catfact.ninja/fact";
+// async function getFact(){
+//     try {
+//         const res=await fetch(fact);
+//         let data=res.json();
+//         data.then((data)=>{
+//             console.log("Fact is :" ,data.fact)
+//         }).catch((err)=>{
+//             console.log(err)
+//         })
+//     } catch (error) {  
+//         console.log(error)
+//     }
+// }
+// getFact();
 // fetch(fact)
 // .then((res)=>{
 // console.log(res);
